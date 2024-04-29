@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap");
+
+* {
+  box-sizing: border-box;
+  transition: 1s all;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(202, 94, 94, 1) 50%,
+    rgba(157, 54, 55, 1) 50%
+  );
+  font-family: arial;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  margin: 100px auto;
+  max-width: 900px;
+  min-height: 1250px;
+  padding: 300px 0 0 0;
+
+  display: flex;
+  justify-content: center;
+  align-item: space-between;
+  gap: 30px;
+
+  position: relative;
+}
+
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+}
+h1,
+h2 {
+  margin-bottom: 0.4rem;
+}
+p,
+li {
+  font-size: 1.3rem;
+}
+
+main > img {
+  --size: 250px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: -30% 70%;
+
+  box-shadow: 0 0 10px 2px #fde720;
+
+  position: absolute;
+  top: 0;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
+  transition: 1s all;
+}
+
+main section > div {
+  border-radius: 75px;
+  width: 400px;
+  padding: 30px;
+  transition: 1s all;
+}
+
+main section:nth-child(2) > div {
+  background-color: #fe7676;
+  box-shadow: 0 0 10px 2px #81ff76;
+}
+
+main section:nth-child(3) > div {
+  background-color: #960404;
+  box-shadow: 0 0 10px 2px #110597;
+  color: white;
+}
+
+/*Modal window*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: ease-in-out all 1s;
+}
+
+.modal .card {
+  position: absolute;
+  transition: ease-in-out all 1s;
+}
+
+.hide {
+  opacity: 0;
+}
+
+/*Trolling*/
+
+#hobby:hover {
+  background: 50% 50%
+    url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fj.gifs.com%2F0fy.gif&f=1&nofb=1&ipt=acc688ee66179f0a3885c0c3089b02c9c4febd353e5cdf40cb21238e54a7222e&ipo=images");
+  heigth: 400px;
+  color: transparent;
+}
+
+main img:hover ~ * > div > * {
+  opacity: 0;
+}
+
+main img:hover ~ * > div {
+  margin: 50px;
+
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fj.gifs.com%2F0fy.gif&f=1&nofb=1&ipt=acc688ee66179f0a3885c0c3089b02c9c4febd353e5cdf40cb21238e54a7222e&ipo=images");
+}
+main img:hover ~ * > div:last-child {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2FaMRZxCZBD_IAAAAC%2Ffurry.gif&f=1&nofb=1&ipt=35e35ffdcf548997f4f7705622a9af7226ccea3938a65430cebd29bae9d49eb8&ipo=images");
+  height: 300px;
+  width: 300px;
+}
+
+/* Video trolling */
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  display: none;
+}
